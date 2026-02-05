@@ -45,13 +45,13 @@ The MySQL client is pre-installed in the Codespace. Connect using:
 
 ```bash
 # Connect as root
-mysql -h 127.0.0.1 -u root -prootpass cop3710
+mysql -u root -p -h 127.0.0.1
 
 # Connect as other users
-mysql -h 127.0.0.1 -u red -predpass cop3710
-mysql -h 127.0.0.1 -u blue -bluepass cop3710
-mysql -h 127.0.0.1 -u green -pgreenpass cop3710
-mysql -h 127.0.0.1 -u orange -porangepass cop3710
+mysql -h 127.0.0.1 -u red -p 
+mysql -h 127.0.0.1 -u blue -p
+mysql -h 127.0.0.1 -u green -p 
+mysql -h 127.0.0.1 -u orange -p 
 ```
 
 ### Common MySQL Commands
