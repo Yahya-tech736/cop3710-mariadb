@@ -80,6 +80,12 @@ CREATE TABLE students (
 EXIT;
 ```
 
+**📝 More Examples:** See [sample-queries.sql](sample-queries.sql) for comprehensive examples including:
+- Creating tables with relationships
+- JOIN operations
+- Aggregate functions
+- Sample data for testing
+
 ## Remote Access via DataGrip or Other IDEs
 
 ### SSH Configuration
