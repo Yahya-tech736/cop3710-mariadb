@@ -173,6 +173,23 @@ With sample data:
 - Sample Entry 2
 - Sample Entry 3
 
+## Verifying Your Setup
+
+A verification script is included to test that all components are properly configured:
+
+```bash
+bash .devcontainer/verify-setup.sh
+```
+
+This script will check:
+- MySQL client installation
+- MariaDB server connectivity
+- Database existence
+- All user accounts (root, red, blue, green, orange)
+- Sample table and data
+- Port accessibility
+- SSH server status
+
 ## Troubleshooting
 
 ### MariaDB not responding
@@ -215,7 +232,8 @@ If you encounter persistent issues:
 │   ├── devcontainer.json      # Codespaces configuration
 │   ├── docker-compose.yml     # Docker services definition
 │   ├── init.sql               # Database initialization script
-│   └── post-create.sh         # Post-creation setup script
+│   ├── post-create.sh         # Post-creation setup script
+│   └── verify-setup.sh        # Environment verification script
 └── README.md                  # This file
 ```
 
