@@ -9,7 +9,7 @@ This repository provides a complete MariaDB database environment that runs autom
 - Latest MariaDB server (automatically started on Codespaces launch)
 - Pre-configured database users: root, red, blue, green, orange
 - MySQL command-line client for terminal access
-- SSH access on port 22 for remote IDE connections (e.g., DataGrip)
+- SSH access on port 2222 for remote IDE connections (e.g., DataGrip)
 - Sample database and table for testing
 
 ## Quick Start
@@ -84,7 +84,7 @@ EXIT;
 
 ### SSH Configuration
 
-Port 22 is forwarded and accessible for SSH connections. You'll need to configure your IDE to connect through the Codespaces SSH tunnel.
+The SSH server runs on port 2222 (the devcontainer sshd feature default) and is accessible for SSH connections. You'll need to configure your IDE to connect through the Codespaces SSH tunnel.
 
 ### DataGrip Setup
 
@@ -154,7 +154,7 @@ Edit `.devcontainer/docker-compose.yml` to modify:
 
 ### Port Configuration
 
-Ports 3306 (MariaDB) and 22 (SSH) are automatically forwarded in Codespaces. You can view and manage port forwarding in the "PORTS" tab of VS Code.
+Ports 3306 (MariaDB) and 2222 (SSH) are automatically forwarded in Codespaces. You can view and manage port forwarding in the "PORTS" tab of VS Code.
 
 ## Sample Database Schema
 
@@ -212,7 +212,7 @@ mysql -h 127.0.0.1 -u root -prootpass cop3710
 
 ### SSH connection issues
 
-1. Check that port 22 is forwarded in the PORTS tab
+1. Check that port 2222 is forwarded in the PORTS tab
 2. Verify the SSH server is running: `sudo service ssh status`
 3. If needed, restart SSH: `sudo service ssh restart`
 
@@ -240,8 +240,8 @@ If you encounter persistent issues:
 ## Additional Resources
 
 - [MariaDB Documentation](https://mariadb.com/kb/en/documentation/)
+- [MariaDB SQL Statements Reference](https://mariadb.com/kb/en/sql-statements/)
 - [GitHub Codespaces Documentation](https://docs.github.com/en/codespaces)
-- [MySQL Command Reference](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html)
 
 ## Support
 

@@ -2,7 +2,7 @@
   "name": "COP3710 MariaDB Development",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspaces/cop3710-mariadb",
   
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
@@ -27,13 +27,13 @@
     }
   },
 
-  "forwardPorts": [3306, 22],
+  "forwardPorts": [3306, 2222],
   "portsAttributes": {
     "3306": {
       "label": "MariaDB",
       "onAutoForward": "notify"
     },
-    "22": {
+    "2222": {
       "label": "SSH",
       "onAutoForward": "silent"
     }

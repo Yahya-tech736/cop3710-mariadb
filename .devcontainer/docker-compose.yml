@@ -4,7 +4,7 @@ services:
   app:
     image: mcr.microsoft.com/devcontainers/base:ubuntu
     volumes:
-      - ../..:/workspaces:cached
+      - ..:/workspaces/cop3710-mariadb:cached
     command: sleep infinity
     network_mode: service:mariadb
     depends_on:
@@ -21,7 +21,6 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     ports:
       - "3306:3306"
-      - "22:22"
 
 volumes:
   mariadb-data:
